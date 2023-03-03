@@ -57,7 +57,7 @@ public class ConfirmationFragment extends Fragment {
         final String address = prefs.getString("address", "No logid");
         final String seller = prefs.getString("seller", "No logid");
 
-        System.out.println(seller + "Meeeee");
+//        System.out.println(seller + "Meeeee");
         String msg = "Hey You have a New Order....!!!😊\nName:" + uname + "\nEmail:" + email + "\nPhone:" + no + "\nAddress:\n" + address;
         System.out.println(msg);
 
