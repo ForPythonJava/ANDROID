@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/@MIDHUN/Learn/OutofScrap/app/src/main/res/layout/activity_admin_home.xml" value="0.25" />
+        <entry key="..\:/@MIDHUN/Learn/OutofScrap/app/src/main/res/layout/content_admin_home.xml" value="0.25" />
+        <entry key="..\:/@MIDHUN/Learn/OutofScrap/app/src/main/res/menu/activity_admin_home_drawer.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutOf Scrap  Final/OutofScrap/app/src/main/res/layout/admin_view_products.xml" value="0.25" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutOf Scrap  Final/OutofScrap/app/src/main/res/layout/fragment_payment.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutOf Scrap  Final/OutofScrap/app/src/main/res/layout/view_review_layout.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/drawable/bgimg.xml" value="0.1985" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/drawable/btn_bg.xml" value="0.1985" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/drawable/circle.xml" value="0.1985" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/drawable/edt_bg.xml" value="0.1985" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/drawable/side_nav_bar.xml" value="0.1985" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/activity_admin_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/activity_registration.xml" value="0.33" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/activity_splash.xml" value="0.12552083333333333" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/activity_user_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/admin_view_food_adapter.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/admin_view_products.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/admin_view_user.xml" value="0.33" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/app_bar_admin_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/app_bar_user_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/content_user_home.xml" value="0.25" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/custom_alert_dialog.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_add_creative.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_add_scrap.xml" value="0.33" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_admin_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_admin_view_feedback.xml" value="0.12395833333333334" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_cart.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_confirmation.xml" value="0.12552083333333333" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_feedback.xml" value="0.25" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_gallery.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_manage_user.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_my_activity.xml" value="0.33" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_my_orders.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_order_admin.xml" value="0.12552083333333333" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_payment.xml" value="0.12552083333333333" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_reply.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_review.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_search.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_slideshow.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_user_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_user_profile.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_v_iew_review.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_view_orders.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/fragment_view_products.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/nav_header_admin_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/nav_header_user_home.xml" value="0.12552083333333333" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/user_view_admin.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/user_view_cart.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/view_feedbacks.xml" value="0.33" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/view_order.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/layout/view_review_layout.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/menu/activity_admin_home_drawer.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/menu/activity_main_drawer.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/menu/admin_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/menu/user_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/@MIDHUN/PROJECTS/ANDROID/TEST/OutofScrap/app/src/main/res/xml/scale.xml" value="0.27291666666666664" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/drawable/btn_bg.xml" value="0.1785" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/drawable/circle.xml" value="0.1785" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/activity_admin_home.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/activity_registration.xml" value="0.14666666666666667" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/activity_splash.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/activity_user_home.xml" value="0.22" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/admin_view_products.xml" value="0.14666666666666667" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/admin_view_user.xml" value="0.1574074074074074" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/app_bar_admin_home.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/app_bar_user_home.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/content_admin_home.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/content_user_home.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_add_creative.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_add_scrap.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_admin_home.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_admin_view_feedback.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_cart.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_confirmation.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_feedback.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_manage_user.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_my_orders.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_order_admin.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_payment.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_reply.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_review.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_search.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_user_profile.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_view_orders.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_view_products.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/fragment_view_review.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/nav_header_admin_home.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/nav_header_user_home.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/user_view_cart.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/view_feedbacks.xml" value="0.14130434782608695" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/view_order.xml" value="0.3333333333333333" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/layout/view_review_layout.xml" value="0.16666666666666666" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/menu/activity_admin_home_drawer.xml" value="0.2" />
+        <entry key="..\:/Project/OutOf Scrap/OutofScrap/app/src/main/res/menu/user_home.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/profile"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nav_scrap"
+            android:icon="@drawable/recycle"
+            android:title="Add Scrap" />
+        <item
+            android:id="@+id/nav_creative_items"
+            android:icon="@drawable/creative"
+            android:title="Add Items" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/search"
+            android:title="Search Products" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/cart"
+            android:title="Cart" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/cargo"
+            android:title="My Orders" />
+        <item
+            android:id="@+id/nav_review"
+            android:icon="@drawable/rating"
+            android:title="Reviews" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/feedback"
+            android:title="Send Feedback" />
+        <item
+            android:id="@+id/nav_activity"
+            android:icon="@drawable/feedback"
+            android:title="My Activity" />
+    </group>
+</menu>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_scrap"
+        android:name="com.example.outofscrap.USER.AddScrapFragment"
+        android:label="Add Scrap"
+        tools:layout="@layout/fragment_add_scrap" />
+    <fragment
+        android:id="@+id/nav_creative_items"
+        android:name="com.example.outofscrap.USER.AddCreativeFragment"
+        android:label="Add Items"
+        tools:layout="@layout/fragment_add_creative" />
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.outofscrap.USER.ProfileFragment"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_user_profile" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.outofscrap.USER.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.outofscrap.USER.CartFragment"
+        android:label="My Cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/nav_orders"
+        android:name="com.example.outofscrap.USER.MyOrders"
+        android:label="My Orders"
+        tools:layout="@layout/fragment_my_orders" />
+    <fragment
+        android:id="@+id/nav_review"
+        android:name="com.example.outofscrap.USER.ViewReviewFragment"
+        android:label="Reviews"
+        tools:layout="@layout/fragment_view_review" />
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.example.outofscrap.USER.FeedbackFragment"
+        android:label="Feedbacks"
+        tools:layout="@layout/fragment_feedback" />
+    <fragment
+        android:id="@+id/nav_activity"
+        android:name="com.example.outofscrap.USER.MyActivity"
+        android:label="My Activity"
+        tools:layout="@layout/fragment_my_activity" />
+</navigation>
