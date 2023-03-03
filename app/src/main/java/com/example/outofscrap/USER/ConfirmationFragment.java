@@ -65,6 +65,7 @@ public class ConfirmationFragment extends Fragment {
         ArrayList<String> parts = smsManager.divideMessage(msg);
         int numParts = parts.size();
 
+
         ArrayList<PendingIntent> sentIntents = new ArrayList<PendingIntent>(numParts);
         ArrayList<PendingIntent> deliveryIntents = new ArrayList<PendingIntent>(numParts);
 
