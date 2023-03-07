@@ -3,6 +3,7 @@ package com.example.outofscrap.USER;
 import static android.content.Context.MODE_PRIVATE;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -46,7 +47,7 @@ public class SearchFragment extends Fragment {
     List<RequestPojo> requestPojoList;
     String key;
     Button btn_cancel, btn_okay;
-    String p_Id, p_type, rate, TOTAL, amt, image, WEIGHT, DESC, SID, NAME = "NULL", SPHONE;
+    String p_Id, p_type, rate, TOTAL, amt, image, WEIGHT, DESC, SID, NAME = "NULL", SPHONE,PID;
     int tot = 0;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -91,6 +92,46 @@ public class SearchFragment extends Fragment {
                 viewProducts("creativeItems");
             }
         });
+
+        binding.searchList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setMessage("Do you want to Update or Delete")
+                        .setCancelable(false)
+                        .setPositiveButton("Update", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Bundle bundle = new Bundle();
+                                RequestPojo requestPojo = requestPojoList.get(position);
+                                bundle.putParcelable("clicked_item", requestPojo);
+                                UpdateProduct fragment = new UpdateProduct();
+                                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                                fragment.setArguments(bundle);
+                                transaction.replace(R.id.nav_host_fragment_content_user_home, fragment);
+                                transaction.commit();
+                            }
+                        }).setNegativeButton("Delete", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        PID = requestPojoList.get(position).getPid();
+//                        AdminDeleteFood();
+                    }
+                })
+                        .setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.setTitle("Out Of Scrap");
+                alert.show();
+                alert.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.parseColor("#000000"));
+                alert.getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(Color.parseColor("#000000"));
+                alert.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.parseColor("#000000"));
+                return false;
+            }
+
+        });
+
 
         binding.searchList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

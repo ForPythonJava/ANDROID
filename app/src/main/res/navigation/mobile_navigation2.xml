@@ -53,4 +53,9 @@
         android:name="com.example.outofscrap.USER.MyActivity"
         android:label="My Activity"
         tools:layout="@layout/fragment_my_activity" />
+    <fragment
+        android:id="@+id/nav_products"
+        android:name="com.example.outofscrap.ADMIN.ViewProducts"
+        android:label="My Products"
+        tools:layout="@layout/fragment_view_products" />
 </navigation>

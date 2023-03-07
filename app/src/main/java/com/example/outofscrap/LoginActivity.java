@@ -77,7 +77,17 @@ public class LoginActivity extends AppCompatActivity {
             loginBinding.logPass.setError("Enter Password");
             loginBinding.logPass.requestFocus();
         } else {
-            login();
+            if (EMAIL.equals("admin@gmail.com") && PASS.equals("admin")) {
+                Snackbar.make(loginBinding.getRoot(), "Login Successful", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                SharedPreferences.Editor editor = getSharedPreferences("SharedData", MODE_PRIVATE).edit();
+                editor.putString("type", "admin");
+//                editor.putString("uname", arr[2]);
+                editor.apply();
+                startActivity(new Intent(getApplicationContext(), AdminHome.class));
+            }else {
+                login();
+            }
         }
     }
 
@@ -108,11 +118,7 @@ public class LoginActivity extends AppCompatActivity {
                     System.out.println("##########" + arr[4]);
                     System.out.println("##########" + arr[5]);
 
-                    if (EMAIL.equals("admin@gmail.com") && PASS.equals("admin")) {
-                        Snackbar.make(loginBinding.getRoot(), "Login Successful", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                        startActivity(new Intent(getApplicationContext(), AdminHome.class));
-                    } else if (arr[1].equals("user")) {
+                    if (arr[1].equals("user")) {
                         Snackbar.make(loginBinding.getRoot(), "Login Successful", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                         startActivity(new Intent(getApplicationContext(), UserHome.class));

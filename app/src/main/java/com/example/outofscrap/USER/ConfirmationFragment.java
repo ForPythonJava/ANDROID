@@ -33,19 +33,12 @@ public class ConfirmationFragment extends Fragment {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-//                MyOrders fragment = new MyOrders();
-//                FragmentManager manager = getActivity().getSupportFragmentManager();
-//                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-//                transaction.replace(R.id.nav_host_fragment_content_user_home, fragment);
-//                transaction.commit();
-//                manager.popBackStack();
                 SendSMS();
                 Intent intent = new Intent(getActivity(), UserHome.class);
                 startActivity(intent);
                 Toast.makeText(getContext(), "Order Placed Successfully", Toast.LENGTH_SHORT).show();
             }
         }, 3000);
-
         return view;
     }
 

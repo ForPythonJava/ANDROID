@@ -29,6 +29,7 @@ import com.example.outofscrap.COMMON.ProductAdapter;
 import com.example.outofscrap.COMMON.RequestPojo;
 import com.example.outofscrap.COMMON.Utility;
 import com.example.outofscrap.R;
+import com.example.outofscrap.USER.UpdateProduct;
 import com.example.outofscrap.databinding.FragmentViewProductsBinding;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
@@ -42,36 +43,29 @@ public class ViewProducts extends Fragment {
 
     FragmentViewProductsBinding viewProductsBinding;
     List<RequestPojo> requestPojoList;
-    String Fid, typ;
+    String Fid, typ, PID, typee;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         viewProductsBinding = FragmentViewProductsBinding.inflate(inflater, container, false);
         View view = viewProductsBinding.getRoot();
-        viewProducts("scrap");
+        SharedPreferences prefs = getContext().getSharedPreferences("SharedData", MODE_PRIVATE);
+        final String type = prefs.getString("type", "No logid");//"No name defined" is the default value.
+        if (type.equals("admin")) {
+            viewProducts("scrap");
+        } else {
+            viewProducts("scrapUser");
+        }
         viewProductsBinding.itemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
                 SharedPreferences prefs = getContext().getSharedPreferences("SharedData", MODE_PRIVATE);
                 String type = prefs.getString("type", "No logid");
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                 if (type.equals("admin")) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                     builder.setMessage("Do you want Delete this item")
                             .setCancelable(false)
-//                            .setPositiveButton("Update", new DialogInterface.OnClickListener() {
-//                                public void onClick(DialogInterface dialog, int id) {
-//                                    Bundle bundle = new Bundle();
-//                                    RequestPojo requestPojo = requestPojoList.get(position);
-//                                    bundle.putParcelable("clicked_item", requestPojo);
-//                                    UpdateFoodFragment fragment = new UpdateFoodFragment();
-//                                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-//                                    fragment.setArguments(bundle);
-//                                    transaction.replace(R.id.nav_host_fragment, fragment);
-//                                    transaction.commit();
-//                                }
-//                            }
-//                )
                             .setNegativeButton("Delete", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     Fid = requestPojoList.get(position).getPid();
@@ -91,6 +85,39 @@ public class ViewProducts extends Fragment {
                     alert.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.parseColor("#000000"));
                     alert.getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(Color.parseColor("#000000"));
                     alert.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.parseColor("#000000"));
+                } else {
+                    builder.setMessage("Do you want to Update or Delete")
+                            .setCancelable(false)
+                            .setPositiveButton("Update", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    Bundle bundle = new Bundle();
+                                    RequestPojo requestPojo = requestPojoList.get(position);
+                                    bundle.putParcelable("clicked_item", requestPojo);
+                                    UpdateProduct fragment = new UpdateProduct();
+                                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                                    fragment.setArguments(bundle);
+                                    transaction.replace(R.id.nav_host_fragment_content_user_home, fragment);
+                                    transaction.commit();
+                                }
+                            }).setNegativeButton("Delete", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            PID = requestPojoList.get(position).getPid();
+                            typee = requestPojoList.get(position).getType();
+                            UserDeleteProduct(PID, typee);
+                        }
+                    })
+                            .setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+                    AlertDialog alert = builder.create();
+                    alert.setTitle("Out Of Scrap");
+                    alert.show();
+                    alert.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.parseColor("#000000"));
+                    alert.getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(Color.parseColor("#000000"));
+                    alert.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.parseColor("#000000"));
+
                 }
             }
         });
@@ -109,6 +136,56 @@ public class ViewProducts extends Fragment {
         });
 
         return view;
+    }
+
+    private void UserDeleteProduct(String pid, String type) {
+        com.android.volley.RequestQueue queue = Volley.newRequestQueue(getContext());
+        StringRequest request = new StringRequest(Request.Method.POST, Utility.url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Log.d("******", response);
+                if (!response.trim().equals("failed")) {
+                    System.out.println(response);
+                    Snackbar.make(getView(), "Deleted Successfully", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                    Fragment fragment = new ViewProducts();
+                    FragmentManager manager = getActivity().getSupportFragmentManager();
+                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.nav_host_fragment_content_user_home, fragment);
+                    transaction.commit();
+                    manager.popBackStack();
+                } else {
+                    Toast.makeText(getContext(), "failed", Toast.LENGTH_LONG).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Toast.makeText(getContext(), "my Error :" + error, Toast.LENGTH_LONG).show();
+                Log.i("My Error", "" + error);
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                SharedPreferences prefs = getContext().getSharedPreferences("SharedData", MODE_PRIVATE);
+                final String uid = prefs.getString("logid", "No logid");//"No name defined" is the default value.
+                Map<String, String> map = new HashMap<String, String>();
+                if (typee.equals("scrap")) {
+                    map.put("key", "deleteScrapUser");
+                    map.put("pid", pid);
+                    map.put("type", type);
+                    map.put("uid", uid);
+                }else{
+                    map.put("key", "deleteItemUser");
+                    map.put("pid", pid);
+                    map.put("type", type);
+                    map.put("uid", uid);
+                }
+                return map;
+            }
+        };
+        queue.add(request);
     }
 
     //sample code start
@@ -141,12 +218,23 @@ public class ViewProducts extends Fragment {
             @Override
             protected Map<String, String> getParams() {
                 SharedPreferences prefs = getContext().getSharedPreferences("SharedData", MODE_PRIVATE);
-                final String uid = prefs.getString("u_id", "No logid");//"No name defined" is the default value.
+                final String uid = prefs.getString("logid", "No logid");//"No name defined" is the default value.
+                final String type = prefs.getString("type", "No logid");//"No name defined" is the default value.
                 Map<String, String> map = new HashMap<String, String>();
-                if (myCan.equals("scrap")) {
-                    map.put("key", "getScrap");
+                if (type.equals("admin")) {
+                    if (myCan.equals("scrap")) {
+                        map.put("key", "getScrap");
+                    } else {
+                        map.put("key", "getCreativeItem");
+                    }
                 } else {
-                    map.put("key", "getCreativeItem");
+                    if (myCan.equals("scrapUser")) {
+                        map.put("uid", uid);
+                        map.put("key", "getScrapUser");
+                    } else {
+                        map.put("uid", uid);
+                        map.put("key", "getCreativeItemUser");
+                    }
                 }
                 map.put("h_id", uid);
                 return map;
